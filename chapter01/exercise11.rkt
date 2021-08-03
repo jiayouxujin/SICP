@@ -83,3 +83,10 @@
 ; (a-plus-abs-b 1 2)->3
 ; (a-plus-abs-b 1 -2)->3
 
+;exercise 1.5
+;use applicative-order,
+;the test procedure will not stop,'cause (p) is a Dead-loop procedure
+(define (p) (p))
+(define (test x y)
+    (if (= x 0) 0 y))
+(test 0 (p))
