@@ -60,3 +60,17 @@
 ;(5+4)+(2 -(3-(6+4/5)))/3(6-2)(2-7)
 (/ (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5))))) (* 3 (- 6 2) (- 2 7)))
 
+;exercise 1.3
+;sum-tow-large-number
+(define (sum-tow-large-number x y z)
+    (define (square x)(* x x))
+    (define (sum-square x y)(+ (square x) (square y)))
+    (define (>= x y) (or (> x y) (= x y)))
+    (cond ((and (>= x z) (>= y z))
+        (sum-square x y))
+        ((and (>= x y) (>= z y))
+        (sum-square x z))
+        ((and (>= y x) (>= z x))
+        (sum-square y z)))
+)
+(sum-tow-large-number 1 -2 3)
