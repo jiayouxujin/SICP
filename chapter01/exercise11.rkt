@@ -62,6 +62,9 @@
 
 ;exercise 1.3
 ;sum-tow-large-number
+;ref https://sicp.readthedocs.io/en/latest/chp1/3.html
+;判断大数有几个方法，可以是cond,if或者写两个procedure[bigger and smaller]
+;写这道题开始有点“流”的感觉
 (define (sum-tow-large-number x y z)
     (define (square x)(* x x))
     (define (sum-square x y)(+ (square x) (square y)))
