@@ -8,7 +8,7 @@
 ;下面会陷入死循环，这是因为applicative-order的解析方式，即进入到new-if，所有arguemnts都会被计算，
 ;一旦调用new-if就会计算sqrt-iter，就进入到死循环 sqrt-iter -> new-if ->sqrt-iter
 (define (sqrt-iter guess x)
-    (if (good-enough? guess x)
+    (new-if (good-enough? guess x)
         guess
         (sqrt-iter (improve guess x) x)
     )
