@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 (define tolerance 0.00001)
 
@@ -17,9 +17,10 @@
     )
     (try first-guess)
 )
+(provide (all-defined-out))
 
-(fixed-point cos 1.0)
-(fixed-point (lambda(y) (+ (sin y) (cos y))) 1.0)
+; (fixed-point cos 1.0)
+; (fixed-point (lambda(y) (+ (sin y) (cos y))) 1.0)
 
 ; (define (sqrt x)
 ;     (fixed-point (lambda(y) (/ x y)) 1.0)
