@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 (define (smallest-divisor n) (find-divisor n 2))
 
@@ -19,5 +19,4 @@
     (= n (smallest-divisor n))
 )
 
-(prime? 2)
-(prime? 9)
+(provide (all-defined-out))

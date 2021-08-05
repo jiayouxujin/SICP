@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;(gcd a b)=(gcd b r) which r is the result of (remainder a b)
 (define (gcd a b)
@@ -8,4 +8,4 @@
     )
 )
 
-(gcd 206 40)
+(provide (all-defined-out))
