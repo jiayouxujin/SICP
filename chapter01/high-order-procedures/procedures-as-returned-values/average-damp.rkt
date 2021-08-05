@@ -25,3 +25,17 @@
 )
 (define dx 0.00001)
 ((deriv (lambda(x)(* x x x))) 5)
+
+(define (newton-transform g)
+    (lambda(x) (- x (/ (g x) ((deriv g) x))))
+)
+
+(define (newtons-method g guess)
+    (fixed-point (newton-transform g) guess)
+)
+
+(define (sqrt-newton x)
+    (newtons-method (lambda(y) (- (square y) x)) 1.0)
+)
+
+(sqrt-newton 2)
