@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ; (define (scale-list items factor)
 ;     (if (null? items)
@@ -13,7 +13,7 @@
 
 (define (map proc items)
     (if (null? items)
-        nil
+        null
         (cons (proc (car items)) (map proc (cdr items)))
     )
 )
@@ -24,5 +24,7 @@
 (define (scale-list items factor)
     (map (lambda(x)(* x factor)) items)
 )
+
+(provide (all-defined-out))
 
 ; (scale-list (list 1 2 3 4 5) 10)
