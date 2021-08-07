@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 ;linear recursive
 (define (expt b n)
@@ -8,8 +8,8 @@
     )
 )
 
-(expt 2 1)
-(expt 4 5)
+; (expt 2 1)
+; (expt 4 5)
 
 ;linear iteration
 (define (expt-it b n)
@@ -22,8 +22,8 @@
     (expt-iter 1 0)
 )
 
-(expt-it 2 1)
-(expt-it 4 5)
+; (expt-it 2 1)
+; (expt-it 4 5)
 
 ;fast-expt
 (define (fast-expt b n)
@@ -41,5 +41,6 @@
 )
 
 
-(fast-expt 2 1)
-(fast-expt 4 5)
+; (fast-expt 2 1)
+; (fast-expt 4 5)
+(provide (all-defined-out))
