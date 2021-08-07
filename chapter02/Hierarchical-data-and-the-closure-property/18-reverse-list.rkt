@@ -1,4 +1,4 @@
-#lang sicp
+#lang racket
 
 (define (reverse lst)
     (define (reverse-iter res lst)
@@ -9,5 +9,6 @@
     )
     (reverse-iter (list ) lst)
 )
+(provide (all-defined-out))
 
-(reverse (list 1 2 3 4))
+; (reverse (list 1 2 3 4))
