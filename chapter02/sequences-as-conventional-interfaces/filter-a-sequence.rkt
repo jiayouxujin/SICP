@@ -96,4 +96,4 @@
     )
 )
 
-(product-of-square-of-odd-elemetns (list 1 2 3 4 5))
+; (product-of-square-of-odd-elemetns (list 1 2 3 4 5))
