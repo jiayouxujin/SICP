@@ -1,6 +1,6 @@
 #lang sicp
 
-;exercise 2.56
+;exercise 2.57
 
 (define (deriv exp var)
     (cond ((number? exp) 0)
