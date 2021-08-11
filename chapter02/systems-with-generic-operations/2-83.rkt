@@ -115,10 +115,10 @@
     (define (tag x) (attach-tag 'rational x))
 
     ;exercise 2.83
-    (put 'raise '(rational)
-        (lambda(x) (make-real (/ (numer x) (denom x))))
-    )
-    
+    ; (put 'raise '(rational)
+    ;     (lambda(x) (make-real (/ (numer x) (denom x))))
+    ; )
+
     (put 'add '(rational rational)
         (lambda(x y) (tag (add-rat x y))))
 
